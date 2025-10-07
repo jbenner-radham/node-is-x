@@ -6,7 +6,9 @@ import path from 'node:path';
 const cjsPath = path.join('dist', 'cjs');
 const entryPoints = [path.join('src', 'index.ts')];
 const esmPath = path.join('dist', 'esm');
-const commonBuildOptions = { bundle: true, entryPoints, minify: true, sourcemap: true };
+const commonBuildOptions = {
+  bundle: true, entryPoints, minify: true, platform: 'node', sourcemap: true
+};
 const typesPath = path.join('dist', 'types');
 
 async function buildCjs() {
@@ -18,7 +20,9 @@ async function buildCjs() {
 }
 
 async function buildEsm() {
-  await esbuild.build({ ...commonBuildOptions, format: 'esm', outdir: esmPath });
+  const entryPoints = [...commonBuildOptions.entryPoints, path.join('src', 'cli.ts')];
+
+  await esbuild.build({ ...commonBuildOptions, entryPoints, format: 'esm', outdir: esmPath });
 
   const esmPackageJson = JSON.stringify({ type: 'module' }, null, 2);
 

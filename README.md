@@ -1,7 +1,7 @@
 @radham/is-x
 ============
 
-...
+Check if a file is executable.
 
 Install
 -------

@@ -1,7 +1,7 @@
 {
   "name": "@radham/is-x",
   "version": "0.0.0",
-  "description": "...",
+  "description": "Check if a file is executable.",
   "keywords": [],
   "homepage": "https://github.com/jbenner-radham/node-starter#readme",
   "bugs": {
@@ -32,6 +32,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "node ./scripts/build.js",
+    "postbuild": "tsx ./src/cli.ts ./dist/esm/cli.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky",

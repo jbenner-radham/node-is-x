@@ -2,7 +2,17 @@
   "name": "@radham/is-x",
   "version": "0.0.0",
   "description": "Check if a file is executable for all.",
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "executable",
+    "execute",
+    "file",
+    "mode",
+    "permission",
+    "permissions",
+    "portable",
+    "terminal"
+  ],
   "homepage": "https://github.com/jbenner-radham/node-is-x#readme",
   "bugs": {
     "url": "https://github.com/jbenner-radham/node-is-x/issues"

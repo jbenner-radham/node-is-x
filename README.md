@@ -47,6 +47,11 @@ await isExecutable(filepath); // > Promise<boolean>
 isExecutableSync(filepath);   // > boolean
 ```
 
+See Also
+--------
+
+- [@radham/plus-x](https://www.npmjs.com/package/@radham/plus-x)
+
 License
 -------
 The BSD 3-Clause License. See the [license file](LICENSE) for details.

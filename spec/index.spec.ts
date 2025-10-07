@@ -1,8 +1,8 @@
-import lib from '../src/index.js';
+import { isExecutable } from '../src/index.js';
 import { describe, expect, it } from 'vitest';
 
-describe('lib', () => {
+describe('isExecutable', () => {
   it('is a function', () => {
-    expect(lib).toBeTypeOf('function');
+    expect(isExecutable).toBeTypeOf('function');
   });
 });

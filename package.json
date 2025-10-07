@@ -1,7 +1,7 @@
 {
   "name": "@radham/is-x",
   "version": "0.0.0",
-  "description": "Check if a file is executable.",
+  "description": "Check if a file is executable for all.",
   "keywords": [],
   "homepage": "https://github.com/jbenner-radham/node-is-x#readme",
   "bugs": {

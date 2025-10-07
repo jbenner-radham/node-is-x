@@ -7,11 +7,12 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "target": "ES2023",
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],

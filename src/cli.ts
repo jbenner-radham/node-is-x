@@ -9,8 +9,6 @@ import path from 'node:path';
 import process from 'node:process';
 
 const cli = meow(`
-  ${pkg.description}
-
   Usage
     $ ${pkg.name.replace('@radham/', '')} <FILE>  [ADDITIONAL FILES...]
 

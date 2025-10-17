@@ -2,6 +2,7 @@
 
 import pkg from '../package.json' with { type: 'json' };
 import { isExecutable } from './index.js';
+import logSymbols from 'log-symbols';
 import meow from 'meow';
 import path from 'node:path';
 import process from 'node:process';
@@ -10,7 +11,7 @@ const cli = meow(`
   ${pkg.description}
 
   Usage
-    $ ${pkg.name.replace('@radham/', '')} <FILE>
+    $ ${pkg.name.replace('@radham/', '')} <FILE>  [ADDITIONAL FILES...]
 
   Options
     --help, -h     Display this message.
@@ -29,19 +30,18 @@ const cli = meow(`
   }
 });
 
-if (cli.input.length !== 1) {
+if (cli.input.length === 0) {
   cli.showHelp();
 }
 
-const filepath = path.resolve(cli.input.at(0)!);
-
 try {
-  const result = await isExecutable(filepath);
+  const filepaths = cli.input.map(filepath => path.resolve(filepath));
+  const results = await Promise.all(filepaths.map(filepath => isExecutable(filepath)));
 
-  if (!result) {
+  if (!results.every(Boolean)) {
     process.exit(1);
   }
 } catch (error) {
-  console.error(error);
+  console.error(logSymbols.error, error instanceof Error ? error.message : error);
   process.exit(1);
 }

@@ -7,8 +7,10 @@ import path from 'node:path';
 import process from 'node:process';
 
 const cli = meow(`
+  ${pkg.description}
+
   Usage
-    $ ${pkg.name} <FILE>
+    $ ${pkg.name.replace('@radham/', '')} <FILE>
 
   Options
     --help, -h     Display this message.

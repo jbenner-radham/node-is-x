@@ -25,6 +25,9 @@ Usage
 
 ```sh-session
 $ is-x --help
+
+  Check if a file is executable for all.
+
   Usage
     $ is-x <FILE>
 

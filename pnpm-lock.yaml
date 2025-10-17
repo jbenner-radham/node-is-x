@@ -37,8 +37,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.18.8)(tsx@4.20.6)(yaml@2.8.1))
       duo-build:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.2.0
+        version: 0.2.0
       eslint:
         specifier: ^9.37.0
         version: 9.37.0
@@ -953,8 +953,8 @@ packages:
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
-  duo-build@0.1.1:
-    resolution: {integrity: sha512-TltydZD+kzeFCnrRg+22jk5ux6Z5hHIIymING3xUsz9nERUv5MoGfRn5/uMlyD2p+bgtMMLqaPWeSSBHTrtZlQ==}
+  duo-build@0.2.0:
+    resolution: {integrity: sha512-J3I2cvfnEZMgI1QGvxrtbVAJ4ndOptX7jVRDlqUmvkeLkWx/wsxTvdYaxOwBxwnYoRx9jmlHQvjcOPy7FgM4Ww==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -2653,11 +2653,13 @@ snapshots:
     dependencies:
       dequal: 2.0.3
 
-  duo-build@0.1.1:
+  duo-build@0.2.0:
     dependencies:
       esbuild: 0.25.11
       execa: 9.6.0
+      is-plain-obj: 4.1.0
       meow: 14.0.0
+      sort-package-json: 3.4.0
       typescript: 5.9.3
 
   eastasianwidth@0.2.0: {}

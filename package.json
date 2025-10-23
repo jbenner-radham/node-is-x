@@ -37,7 +37,7 @@
     }
   },
   "bin": {
-    "is-x": "dist/esm/cli.js"
+    "is-x": "./dist/esm/cli.js"
   },
   "files": [
     "dist",

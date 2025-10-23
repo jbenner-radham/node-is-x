@@ -1,5 +1,5 @@
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
-  - meowtastic
+  - meowtastic@0.3.1
 onlyBuiltDependencies:
   - esbuild@0.25.10 || 0.25.11

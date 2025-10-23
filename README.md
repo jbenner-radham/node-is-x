@@ -29,10 +29,11 @@ $ is-x --help
   Check if a file is executable for all.
 
   Usage
-    $ is-x <FILE>
+    $ is-x [OPTIONS] <FILE> [ADDITIONAL FILES...]
 
   Options
     --help, -h     Display this message.
+    --verbose, -V  Display messages pertaining to each operation.
     --version, -v  Display the application version.
 ```
 

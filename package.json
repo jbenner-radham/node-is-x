@@ -1,6 +1,6 @@
 {
   "name": "@radham/is-x",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Check if a file is executable for all.",
   "keywords": [
     "cli",

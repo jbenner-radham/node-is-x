@@ -45,7 +45,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "duo-build --platform node",
+    "build": "duo-build --packages external --platform node",
     "postbuild": "tsx ./src/cli.ts ./dist/esm/cli.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -58,7 +58,8 @@
   "dependencies": {
     "chalk": "^5.6.2",
     "log-symbols": "^7.0.1",
-    "meow": "^14.0.0"
+    "meow": "^14.0.0",
+    "meowtastic": "^0.3.1"
   },
   "devDependencies": {
     "@eslint/compat": "^1.4.0",
